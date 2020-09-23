@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { UnauthorizedComponent } from './unauthorized/unauthorized.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor } from './auth.interceptor';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 export function configureAuth(oidcConfigService: OidcConfigService) {
   return () =>
@@ -34,6 +35,7 @@ export function configureAuth(oidcConfigService: OidcConfigService) {
     ]),
     AuthModule.forRoot(),
     HttpClientModule,
+    NgbModule,
   ],
   providers: [
     OidcConfigService,
