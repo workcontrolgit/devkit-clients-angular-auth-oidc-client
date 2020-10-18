@@ -12,7 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 export function configureAuth(oidcConfigService: OidcConfigService) {
   return () =>
     oidcConfigService.withConfig({
-      stsServer: 'https://devkit-sts.azurewebsites.net',
+      stsServer: 'https://devkit-sts.azurewebsites.net', //https://localhost:44354
       redirectUrl: window.location.origin,
       postLogoutRedirectUri: window.location.origin,
       clientId: 'devkit-clients-spa.pkce',
